@@ -43,9 +43,6 @@ Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzion
 Sommiamo i due numeri
 Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto.
-Consigli del giorno
-Scriviamo sempre in italiano i passaggi che vogliamo fare
-Scriviamo sempre solo un pezzetto di codice alla volta, se funziona allora andiamo avanti.
-Non reinventate la ruota, per generare un numero random tra un minimo e un massimo usate quella che trovate su W3School.
  */
     
+
