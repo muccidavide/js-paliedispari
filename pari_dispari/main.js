@@ -15,12 +15,14 @@ function getRndInteger(min, max) {
   }
     
 // dichiaro variabili per la scelta del pari e dipari utente, del numero dell'utente da 1 a 5, e numero rnd Pc da 1 a 5 
+
 let userChoise = prompt('Scegli pari o dispari?');
 let userNumber = Number(prompt('scegli un numero da 1 a 5'))
 let pcNumber = getRndInteger(1,5)
 
 
 // funzioni check se somma pari ==> valore booleano
+
 function pariDispariChecker(numb1, numb2) {
 
     let sum = numb1 + numb2;
@@ -34,6 +36,8 @@ function pariDispariChecker(numb1, numb2) {
 //confronto la somma con la scelta da parte dell'utente e mostro la scelta, i numeri dei "giocatori", e chi ha vinto!
 //aggiunto anche step di controllo se utente sbaglia valori richiesti  
 
+console.log();
+
 if (pariDispariChecker(userNumber, pcNumber) && userChoise === "pari") {                            
     console.log(`User ha scelto ${userChoise} : ${userNumber} and Pc: ${pcNumber}`);
     console.log('complimenti hai vinto!');
@@ -42,11 +46,16 @@ if (pariDispariChecker(userNumber, pcNumber) && userChoise === "pari") {
     console.log(`User ha scelto ${userChoise} : ${userNumber} and Pc: ${pcNumber}`);
     console.log('complimenti hai vinto!');
 
-} else if(userChoise !== 'pari' || userChoise !== 'dispari'|| userNumber < 1 || userNumber > 5 || userNumber === NaN ){
-    console.log('valori inseriti non corretti');
-} else{
+} else if (userNumber < 1 || userNumber > 5 || userNumber === NaN ){
+    console.log('numero inserito non corretto');
+} else if (userChoise !== 'pari' && userChoise !== 'dispari'){
+    console.log('scelta eseguita non corretta');
+}
 
-    console.log(`User ha scelto ${userChoise} :${userNumber} and Pc: ${pcNumber}`);
+
+else{
+
+     console.log(`User ha scelto ${userChoise} : ${userNumber} and Pc: ${pcNumber}`);
     console.log('ritenta sarai più fortunato');
 }
 
